@@ -1,3 +1,7 @@
+'''
+Accuracy analysis of all participant results in experiment 1 and plot as bar chart for visualization
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 
