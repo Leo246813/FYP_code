@@ -1,9 +1,12 @@
+'''
+Experiment 2 distraction task: delay time between response and actual finished time of sequence
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 import pandas as pd
 
-# Your data organized by participant and trial
 # 5 participants, 10 trials each
 # Delay data (response times in seconds)
 delay_data = [
