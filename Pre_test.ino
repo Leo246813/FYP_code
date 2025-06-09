@@ -1,3 +1,7 @@
+// Pre-test (pre-requisite for experiment 1 and 2)
+// Test basic sensitivity of each actuator by actuating in sequence
+// Test if participants can distinguish between single and double tapping for direction indication
+
 // Define pins for motor driver control
 const int motor1_pins[] = {23, 25, 27, 29, 31};  // Pins for motor driver 1
 const int motor2_pins[] = {32, 34, 36, 38, 40};  // Pins for motor driver 2
@@ -36,18 +40,18 @@ void setup() {
   digitalWrite(motor4_pins[2], HIGH); // Enable motor driver 4
 
   // Equal force testing with single tap & max amplitude
-//  singleTap(motor1_pins[0], motor1_pins[1], pwm_pins[0]); // act 1
-//  delay(1000);
-//  singleTap(motor1_pins[3], motor1_pins[4], pwm_pins[1]); // act 2
-//  delay(1000);
-//  singleTap(motor2_pins[0], motor2_pins[1], pwm_pins[8]); // act 3
-//  delay(1000);
-//  singleTap(motor2_pins[3], motor2_pins[4], pwm_pins[9]); // act 4
-//  delay(1000);
-//  singleTap(motor3_pins[0], motor3_pins[1], pwm_pins[4]); // act 5
-//  delay(1000);
-//  singleTap(motor3_pins[3], motor3_pins[4], pwm_pins[5]); // act 6
-//  delay(1000);
+ singleTap(motor1_pins[0], motor1_pins[1], pwm_pins[0]); // act 1
+ delay(1000);
+ singleTap(motor1_pins[3], motor1_pins[4], pwm_pins[1]); // act 2
+ delay(1000);
+ singleTap(motor2_pins[0], motor2_pins[1], pwm_pins[8]); // act 3
+ delay(1000);
+ singleTap(motor2_pins[3], motor2_pins[4], pwm_pins[9]); // act 4
+ delay(1000);
+ singleTap(motor3_pins[0], motor3_pins[1], pwm_pins[4]); // act 5
+ delay(1000);
+ singleTap(motor3_pins[3], motor3_pins[4], pwm_pins[5]); // act 6
+ delay(1000);
 
 
   // Number of taps (single tap, double taps)
