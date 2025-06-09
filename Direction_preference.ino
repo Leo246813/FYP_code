@@ -1,3 +1,6 @@
+// Pre-test 2: direction preference for left, right, forward, and backward
+// Two modes of actuation are valid for each direction, depends on which one suits the participant
+
 // Define pins for motor driver control
 const int motor1_pins[] = {23, 25, 27, 29, 31};  // Pins for motor driver 1
 const int motor2_pins[] = {32, 34, 36, 38, 40};  // Pins for motor driver 2
@@ -40,30 +43,6 @@ void setup() {
   digitalWrite(motor1_pins[2], HIGH); // Enable motor driver 1
   digitalWrite(motor2_pins[2], HIGH); // Enable motor driver 2
   digitalWrite(motor3_pins[2], HIGH); // Enable motor driver 3
-
-//  // DOWN Direction (1 --> 5 --> 6)
-//  for (int cycle = 0; cycle < 2; cycle++) {
-//    tapActuator_twice(motor1_pins[0], motor1_pins[1], pwm_pins[0]); // Actuator 1
-//    if (cycle == 0) delay(1000); else delay(SPEED[0]);
-//    tapActuator_once(motor3_pins[0], motor3_pins[1], pwm_pins[4]); // Actuator 5
-//    if (cycle == 0) delay(1000); else delay(SPEED[1]);
-//    tapActuator_once(motor3_pins[3], motor3_pins[4], pwm_pins[5]); // Actuator 6
-//    if (cycle == 0) delay(1000); else delay(SPEED[2]);
-//    delay(1000);
-//  }
-//  delay(2000);
-//    
-//  // UP Direction (6 --> 5 --> 1)
-//  for (int cycle = 0; cycle < 3; cycle++) {
-//    tapActuator_twice(motor3_pins[3], motor3_pins[4], pwm_pins[5]); // Actuator 6
-//    if (cycle == 0) delay(1000); else delay(SPEED[0]);
-//    tapActuator_once(motor3_pins[0], motor3_pins[1], pwm_pins[4]); // Actuator 5
-//    if (cycle == 0) delay(1000); else delay(SPEED[1]);
-//    tapActuator_once(motor1_pins[0], motor1_pins[1], pwm_pins[0]); // Actuator 1
-//    if (cycle == 0) delay(1000); else delay(SPEED[2]);
-//    delay(1000);
-//  }
-//  delay(2000);
   
   // RIGHT Direction (2 --> 1 --> 4)
   for (int cycle = 0; cycle < 3; cycle++) {
